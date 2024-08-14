@@ -1,0 +1,6 @@
+@DotnetRateLimitAPI_HostAddress = http://localhost:5051
+
+GET {{DotnetRateLimitAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

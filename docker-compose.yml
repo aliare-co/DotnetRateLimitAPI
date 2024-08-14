@@ -1,0 +1,36 @@
+services:
+  app1:
+    build: .
+    ports:
+    - "5001:8080"
+    networks:
+      - proxy-network
+
+  app2:
+    build: .
+    ports:
+    - "5002:8080"
+    networks:
+      - proxy-network
+
+  app3:
+    build: .
+    ports:
+    - "5003:8080"
+    networks:
+      - proxy-network
+
+  proxy:
+    build: ./LoadBalancer
+    ports:
+    - "8080:80"
+    depends_on:
+      - app1
+      - app2
+      - app3
+    networks:
+      - proxy-network
+
+networks: 
+    proxy-network:
+      driver: bridge

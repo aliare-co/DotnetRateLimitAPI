@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dotnet-rate-limit-deployment
+  labels:
+    app: dotnet-rate-limit
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: dotnet-rate-limit
+  template:
+    metadata:
+      labels:
+        app: dotnet-rate-limit
+    spec:
+      containers:
+      - name: dotnet-rate-limit
+        image: tetri/dotnet-rate-limit:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80

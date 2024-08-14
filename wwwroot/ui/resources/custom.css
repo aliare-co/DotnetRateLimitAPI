@@ -1,0 +1,40 @@
+﻿:root {
+    --bgMain: #eee; /* Cor de fundo principal - um tom claro de cinza para um fundo neutro */
+    --fcBase: #333; /* Cor da fonte principal - um tom escuro para bom contraste */
+    --bgMenuActive: #009688; /* Cor de fundo do item de menu ativo - um tom verde-água vibrante */
+    --bcMenuActive: #00796b; /* Cor da borda do item de menu ativo - um tom verde-escuro */
+    --primaryColor: #00796b; /* Cor primária - um tom de verde-escuro */
+    --secondaryColor: #004d40; /* Cor secundária - um tom de verde-azulado escuro */
+    --bgButton: #009688; /* Cor de fundo do botão - verde-água vibrante para manter a consistência */
+    --bgAside: var(--primaryColor); /* Cor de fundo do aside - usando a cor primária */
+    --bgTable: #ffffff; /* Cor de fundo da tabela - um tom claro para boa legibilidade */
+    --bgTableSecondary: #004d40; /* Cor de fundo secundária da tabela - um tom verde-azulado escuro */
+}
+
+@font-face {
+    font-family: 'Roboto-Thin';
+    src: url('../Roboto-Thin.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'FiraMono-Regular';
+    src: url('../FiraMono-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'FiraCode';
+    src: url('../FiraCode-VariableFont_wght.ttf') format('truetype');
+}
+
+* {
+    font-family: FiraCode, sans-serif;
+}
+
+.hc-aside__logo {
+    display: none;
+}
